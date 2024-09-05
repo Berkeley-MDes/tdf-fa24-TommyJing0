@@ -15,4 +15,8 @@
 - **AI 3D Modeling**:  
     - Experimented with an AI-based 3D modeling software called **Adam**, which generates 3D objects based on text prompts. This was an insightful exploration of how AI can streamline the 3D modeling process.
     - ![image](https://github.com/user-attachments/assets/fc4031db-87d8-4716-9967-3a1dc9e54492)
+    - ![image](https://github.com/user-attachments/assets/631ad47e-0bf2-4026-a644-c1c845525043)
+    - ![image](https://github.com/user-attachments/assets/1f3d0790-f749-4a6b-896b-73529c61689e)
+
+
 

@@ -11,3 +11,8 @@
   
 - **Software Familiarization**:  
     - Downloaded **Rhino** and spent time getting re-familiarized with the software since I hadn’t used it for a while.
+ 
+- **AI 3D Modeling**:  
+    - Experimented with an AI-based 3D modeling software called **Adam**, which generates 3D objects based on text prompts. This was an insightful exploration of how AI can streamline the 3D modeling process.
+    - ![image](https://github.com/user-attachments/assets/fc4031db-87d8-4716-9967-3a1dc9e54492)
+

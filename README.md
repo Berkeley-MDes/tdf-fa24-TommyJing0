@@ -1,6 +1,4 @@
-# Outline
-[week 1](README.md#week-1-example-report-1)
-
+## Week 1
 ## Week of 09/05/2024
 ## Achievements
 - **Online Workshop Training**:  

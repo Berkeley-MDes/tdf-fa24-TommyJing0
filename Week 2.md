@@ -13,3 +13,9 @@ This is not my first time using Rhino, but it is my first time working with Gras
 Afterward, I experimented with adjusting the viewing angle, which I hadn’t initially considered. It was really cool to see how I could change the shape of the phone stand using just a couple of sliders.
 
 <img width="1919" alt="image" src="https://github.com/user-attachments/assets/7e847716-8ee8-4d1f-bac0-73681fb4d105">
+
+I also tested some extreme scenarios, like positioning the phone vertically at a steep angle to see if the program would warn me about a potential tipping situation — and it did. I traced it back and opened the "Cluster Cell Phone" component, and the calculations/algorithm behind it were really impressive.
+
+<img width="1919" alt="image" src="https://github.com/user-attachments/assets/1a8c2612-cec1-4690-a832-7e892f33adc7">
+
+<img width="1919" alt="image" src="https://github.com/user-attachments/assets/5bdada82-3a2c-4417-b6fe-a483b34d1283">

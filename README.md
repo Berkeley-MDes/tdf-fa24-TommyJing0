@@ -1,6 +1,10 @@
+# Hello, My name is Zhequan (Tommy) Jing
+
+I am a UI/UX designer with a focus on the automotive industry, where I specialize in creating intuitive and innovative user interfaces that enhance the driving experience and vehicle interaction.
+
 # Design Project Progress
 
-This README tracks the progress of my design project
+This README tracks the progress of my design project.
 
 ## Weeks
 

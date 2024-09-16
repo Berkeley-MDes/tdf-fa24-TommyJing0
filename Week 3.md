@@ -22,10 +22,12 @@ At this point, I'm thinking, why not just create multiple slots in the phone sta
 
 What I’m doing here is simply copying the workflow for the first phone three times, so now I have a total of four slots that provide four different viewing angles. However, there’s a slight problem: since the code is a direct copy, I have to adjust the phone’s location on the X and Y axes, as well as the rotation angle, individually for each one. This turns out to be a lot of work, and since I’m a lazy person, I’m creating a calculation workflow to automatically set the distance between the phones and the tilt angle offset.
 
+#### Distance Offset
 | ![image](https://github.com/user-attachments/assets/7be976e1-fc24-4f09-b133-de3c454f48ae) | ![image2](https://github.com/user-attachments/assets/469b96a3-8fb2-4edf-9fea-c858e6910227) |
 |:---:|:---:|
 | 6MM | 19MM |
 
+#### View Angle Offset
 | ![image](https://github.com/user-attachments/assets/316838c2-72f3-42a8-8932-3115c7d33cb9) | ![image2](https://github.com/user-attachments/assets/7b0a375a-c046-4363-b996-f84c9f839bde) |
 |:---:|:---:|
 | 0 DEGREE | 15 DEGREE  |

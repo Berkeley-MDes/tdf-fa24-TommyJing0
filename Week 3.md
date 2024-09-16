@@ -1,5 +1,5 @@
 ## Week 3
-## Week of 09/015/2024
+## Week of 09/15/2024
 
 ### Grasshopper 
 Yes, I did it! This is my first time experimenting with Grasshopper, and I can’t imagine that such a simple design has so much complexity behind it. In the beginning, I don’t quite understand why I need Grasshopper, especially since I can design this phone stand in NX in 10 minutes and probably have it printed before I'm done with Grasshopper. However, as I spend more time working with it and gain more understanding, I’m starting to appreciate and enjoy the process.
@@ -40,6 +40,10 @@ To achieve this, I write a series of division, addition, and multiplication oper
   <img src="https://github.com/user-attachments/assets/241600c1-88a5-4507-8988-029278de2030" alt="image1" width="45%">
   <img src="https://github.com/user-attachments/assets/07b6ceda-e6d7-4d18-97d5-4e99bcf8b2b7" alt="image2" width="45%">
 </p>
+
+After setting up the phone, it's time to make the phone stand. The stand itself is very minimalist, featuring 4 slots for the 4 different phone models I created earlier. I use the `Rectangle` function to create the stand and then apply `Solid Difference` a few times to cut out the slots individually. I create a couple of `number sliders` to adjust the length, width, height, and corners of the stand.
+
+<img width="1919" alt="image" src="https://github.com/user-attachments/assets/b0100800-7d3f-4b87-9b75-6a3ac6d369a8">
 
 
 

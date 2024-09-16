@@ -65,4 +65,5 @@ Overall, my first experience with Grasshopper has been excellent. My goal for th
 
 ### Grasshopper File
 https://github.com/Berkeley-MDes/tdf-fa24-TommyJing0/blob/main/Phone%20Stand.gh
-Yes, is open source.
+
+Yes, it's open source (and I promise, it's 100% not a virus... probably).

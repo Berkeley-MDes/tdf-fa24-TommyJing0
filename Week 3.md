@@ -12,4 +12,10 @@ Now, let's talk about the phone stand design. My requirements are very specificâ
 |:---:|:---:|
 | NO | NO |
 
-I own a Samsung Galaxy S24 Ultra. After searching for its dimensions online, I decided to first create a phone model in Grasshopper with the same dimensions as mine, and then design the stand around it.
+I own a Samsung Galaxy S24 Ultra. After searching for its dimensions online, I decided to first create a phone model in Grasshopper with the same dimensions as mine, and then design the stand around it. The phone model was created using the `Rectangle` function first, then converted to a Brep with extrusion. I used the `Move` function in both X and Y directions, and the `Rotate` function to adjust the viewing angle.
+
+<img width="1919" alt="image" src="https://github.com/user-attachments/assets/829fd73e-a817-4798-b7fa-35fee9ea9341">
+
+At this point, I'm thinking, why not just create multiple slots in the phone stand at different tilt angles? That way, I can easily place the phone in whichever slot suits my needs, providing various viewing angles without the need for complex mechanisms. Plus, it would be very easy to print since no support is needed.
+
+

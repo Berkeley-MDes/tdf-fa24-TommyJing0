@@ -37,13 +37,20 @@ To achieve this, I write a series of division, addition, and multiplication oper
 <img src="https://github.com/user-attachments/assets/095f3403-9800-491e-8636-85d74760b091" alt="Recording 2024-09-15 205612" width="100%"/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/241600c1-88a5-4507-8988-029278de2030" alt="image1" width="45%">
-  <img src="https://github.com/user-attachments/assets/07b6ceda-e6d7-4d18-97d5-4e99bcf8b2b7" alt="image2" width="45%">
+  <img src="https://github.com/user-attachments/assets/241600c1-88a5-4507-8988-029278de2030" alt="image1" width="49%">
+  <img src="https://github.com/user-attachments/assets/07b6ceda-e6d7-4d18-97d5-4e99bcf8b2b7" alt="image2" width="49%">
 </p>
 
 After setting up the phone, it's time to make the phone stand. The stand itself is very minimalist, featuring 4 slots for the 4 different phone models I created earlier. I use the `Rectangle` function to create the stand and then apply `Solid Difference` a few times to cut out the slots individually. I create a couple of `number sliders` to adjust the length, width, height, and corners of the stand.
 
 <img width="1919" alt="image" src="https://github.com/user-attachments/assets/b0100800-7d3f-4b87-9b75-6a3ac6d369a8">
+
+At this point, I'm pretty much done with the phone stand and am starting to get addicted to Grasshopper. I added further calculations to automatically center the phone on the Y axis of the stand, so I don't have to manually adjust it. The logic is simple: \[(phone stand width) - (phone width)\] / 2 to get the offset, and then I add this offset to the `Move` function for the Y axis. Very simple yet effective.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f1775175-4e74-44e6-8bad-cdfec2aa4e10" alt="image1" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/cc998b87-cf85-4bf1-9808-3d5f5a7635bd" alt="image2" width="49%"/>
+</p>
 
 
 

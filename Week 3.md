@@ -58,5 +58,9 @@ Last but not least, I added the `Custom Preview` function along with the `Colour
 
 <img width="1919" alt="image" src="https://github.com/user-attachments/assets/49dde91c-e089-4b79-9e53-b80d422e5c5b">
 
+Overall, my first experience with Grasshopper has been excellent. My goal for this phone stand was to meet my specific needs: to create a functional and easy-to-make design. I believe this design achieves that perfectly. By making nearly every element adjustable and movable, I’ve been able to fully utilize Grasshopper’s capabilities. This is where Grasshopper truly excels—it allows me to easily modify the model to fit different phones or adapt to someone else’s requirements.
+
+<img width="1670" alt="image" src="https://github.com/user-attachments/assets/798f036f-de12-4d11-8981-1a981f157556">
+<img width="1670" alt="image" src="https://github.com/user-attachments/assets/e8f847b5-a0ce-4976-b43f-053a51281604">
 
 

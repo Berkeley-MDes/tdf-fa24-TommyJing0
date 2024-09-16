@@ -52,7 +52,11 @@ At this point, I'm pretty much done with the phone stand and am starting to get 
   <img src="https://github.com/user-attachments/assets/cc998b87-cf85-4bf1-9808-3d5f5a7635bd" alt="image2" width="49%"/>
 </p>
 
+![Recording 2024-09-15 213040](https://github.com/user-attachments/assets/c1e7feac-d80d-41b9-b9d0-9cd7128a7e36)
 
+Last but not least, I added the `Custom Preview` function along with the `Colour Swatch`, allowing me to change the color of the phone base.
+
+<img width="1919" alt="image" src="https://github.com/user-attachments/assets/49dde91c-e089-4b79-9e53-b80d422e5c5b">
 
 
 

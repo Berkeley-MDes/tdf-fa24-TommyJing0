@@ -32,5 +32,12 @@ What I’m doing here is simply copying the workflow for the first phone three t
 |:---:|:---:|
 | 0 DEGREE | 15 DEGREE  |
 
+To achieve this, I write a series of division, addition, and multiplication operations to set the offset, then connect them from the `number slider` to the inputs of the `Rotate` and `Move` functions after the `Extrusion`.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/241600c1-88a5-4507-8988-029278de2030" alt="image1" width="45%">
+  <img src="https://github.com/user-attachments/assets/07b6ceda-e6d7-4d18-97d5-4e99bcf8b2b7" alt="image2" width="45%">
+</p>
+
 
 

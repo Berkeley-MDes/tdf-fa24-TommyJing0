@@ -12,3 +12,4 @@ This README tracks the progress of my design project.
 - [Week 2](https://github.com/Berkeley-MDes/tdf-fa24-TommyJing0/blob/main/Week%202.md)
 - [Week 3](https://github.com/Berkeley-MDes/tdf-fa24-TommyJing0/blob/main/Week%203.md)
 - [Week 4](https://github.com/Berkeley-MDes/tdf-fa24-TommyJing0/blob/main/Week%204.md)
+- [Week 5](https://github.com/Berkeley-MDes/tdf-fa24-TommyJing0/blob/main/Week%205.md)

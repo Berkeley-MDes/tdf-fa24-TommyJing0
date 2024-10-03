@@ -16,7 +16,7 @@ I figured out how to use the display provided in our kit. The display is 128x64 
 
 // Declaration for an SSD1306 display connected to I2C
 #define OLED_RESET    -1  // Reset pin # 
-#define SCREEN_ADDRESS 0x3C  // I2C address for the display
+#define SCREEN_ADDRESS 0x3C  // I2C address for the display (0x3D)
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
@@ -47,3 +47,19 @@ void setup() {
 void loop() {
   // Too much infomation...
 }
+```
+![WechatIMG10](https://github.com/user-attachments/assets/5eec5ebf-a1c6-4900-8e46-98b86655401c)
+![image](https://github.com/user-attachments/assets/3a4a349c-c476-4405-8200-2b6ef30bd0cb)
+![image](https://github.com/user-attachments/assets/877e530c-e6d1-46eb-94f6-2975e642daaa)
+
+## Pin Map:
+
+This pin map details how to connect the OLED display to the Particle Photon 2 using I2C.
+
+| **Display Pin**   | **Photon 2 Pin**   | **Description**                  |
+|:-----------------:|:------------------:|:---------------------------------:|
+| **Data**          | **D0**             | I2C Data (SDA)                   |
+| **Clk**           | **D1**             | I2C Clock (SCL)                  |
+| **VIN**           | **Li+** or **3V3** | Power supply for the display     |
+| **GND**           | **GND**            | Ground                           |
+

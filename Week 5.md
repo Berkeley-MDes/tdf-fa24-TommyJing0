@@ -64,3 +64,13 @@ This pin map details how to connect the OLED display to the Particle Photon 2 us
 | **VIN**           | **Li+** or **3V3** | Power supply for the display     |
 | **GND**           | **GND**            | Ground                           |
 
+## Install Libraries
+Installing libraries is a function I find very useful and absolutely necessary as the project progresses. Particle Workbench makes this process much easier, and here’s how you can do it:
+
+1. Open **Particle Workbench** in Visual Studio Code.
+2. Open the **Command Palette** by pressing `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows).
+3. Select `Particle: Install Library` from the available commands.
+4. In the input field that appears, enter the name of the library you want to install.
+5. Wait for the installation to complete, and verify that the library has been added to your project's `lib` folder.
+
+Additionally, you can use the **Find Libraries** feature to look up available libraries before installation by selecting `Particle: Find Library` in the Command Palette.

@@ -7,6 +7,7 @@ I figured out how to use the display provided in our kit. The display is 128x64 
 ## Code:
 
 ```cpp
+!!! Extremely Important: Must Install `oled-wing-adafruit` Library !!!
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>

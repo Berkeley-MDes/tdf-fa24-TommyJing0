@@ -53,6 +53,8 @@ void loop() {
 ![image](https://github.com/user-attachments/assets/3a4a349c-c476-4405-8200-2b6ef30bd0cb)
 ![image](https://github.com/user-attachments/assets/877e530c-e6d1-46eb-94f6-2975e642daaa)
 
+Sometimes I find that this code can be unstable, and the display will remain blank. I haven’t been able to pinpoint the reason why, but usually after a couple of refreshes, it starts working. I'm unsure if it's a software or hardware issue. Maybe there’s a glitch in the code, or perhaps it needs a pull-up resistor? If you have any insights or suggestions, please let me know.
+
 ## Pin Map:
 
 This pin map details how to connect the OLED display to the Particle Photon 2 using I2C.

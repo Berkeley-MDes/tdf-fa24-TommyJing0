@@ -76,3 +76,9 @@ Installing libraries is a function I find very useful and absolutely necessary a
 5. Wait for the installation to complete, and verify that the library has been added to your project's `lib` folder.
 
 Additionally, you can use the **Find Libraries** feature to look up available libraries before installation by selecting `Particle: Find Library` in the Command Palette.
+
+<img width="599" alt="Screenshot 2024-10-03 at 7 40 20 AM" src="https://github.com/user-attachments/assets/5470c033-eebd-45a8-8c17-489ba7794970">
+<img width="599" alt="Screenshot 2024-10-03 at 7 36 04 AM" src="https://github.com/user-attachments/assets/f262e284-2317-4514-a2b0-d5ae6df8e837">
+<img width="708" alt="Screenshot 2024-10-03 at 7 37 04 AM" src="https://github.com/user-attachments/assets/8d75c060-1986-41ca-95aa-2aba90d9ecc6">
+<img width="599" alt="Screenshot 2024-10-03 at 7 34 23 AM" src="https://github.com/user-attachments/assets/ee7d686d-e402-4e4e-a813-487703a43ed5">
+

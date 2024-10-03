@@ -15,8 +15,8 @@ I figured out how to use the display provided in our kit. The display is 128x64 
 #define SCREEN_HEIGHT 64  // OLED display height, in pixels
 
 // Declaration for an SSD1306 display connected to I2C
-#define OLED_RESET    -1  // Reset pin # (or -1 if sharing Arduino reset pin)
-#define SCREEN_ADDRESS 0x3C  // I2C address for the display (commonly 0x3C or 0x3D for 128x64 OLED)
+#define OLED_RESET    -1  // Reset pin # 
+#define SCREEN_ADDRESS 0x3C  // I2C address for the display
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
@@ -45,5 +45,5 @@ void setup() {
 }
 
 void loop() {
-  // Nothing needed here for this example
+  // Too much infomation...
 }

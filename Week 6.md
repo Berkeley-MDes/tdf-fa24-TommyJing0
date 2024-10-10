@@ -1,6 +1,7 @@
-## Week 5
+## Week 6
 ## Week of 10/07/2024
 ## My Experience with Particle Photon and OLED Display
+
 After successfully printing “Hello World” on the OLED screen using the Particle Photon platform, I started diving deeper into the project. To be honest, the past week (and the beginning of this week) has been quite rough. I managed to brick not one, but two Photon 2 devices. However, after a lot of troubleshooting, I finally found the root cause of my problem.
 
 The issue stemmed from a combination of soldering the pins while also having the I2C wires connected, and then placing the entire setup on a breadboard. While it might seem harmless to do all these steps together, it can lead to problems because:
@@ -13,9 +14,21 @@ The lesson I learned: you can solder the pins and connect the I2C wires, but do 
 
 Hey, at least I got one more Photon left, so fingers crossed it survives! 😅
 
-##SparkFun Thing Plus Qwiic Shield
+## SparkFun Thing Plus Qwiic Shield
+This week, I had the chance to solder the SparkFun Thing Plus Qwiic Shield, and I’ve got to say, I really like the design of this board. It provides me with two I2C connection ports, which means I don’t have to wire 8 individual connections if I need to output to multiple devices. The Qwiic system simplifies the wiring process significantly.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c1bdbe84-2f33-414c-a44a-81dd05033fa0" width="45%" />
+  <img src="https://github.com/user-attachments/assets/8b48372b-d522-4980-82b9-09913a4495f0" width="45%" />
+</p>
+
+The board itself looks and feels very high quality, and it fits into the breadboard perfectly. It stays snug without wobbling around, which is a huge plus when working on projects that require steady connections. Overall, it’s a solid board that makes prototyping much easier and cleaner.
+
+![221728544588_ pic](https://github.com/user-attachments/assets/13457de4-ba7a-4211-900d-165e69ea0b78)
 
 ## APDS9960 Gesture and Proximity Detection
+
+I wrote the code for the APDS9960 sensor to handle both proximity sensing and gesture detection, with feedback displayed on an OLED screen. This system has 2 modes mainly because the sensor cannot handle both proximity and gesture detection simultaneously. The system starts in proximity mode, where it continuously reads and displays proximity data. When a valid gesture (up, down, left, or right) is detected, the code switches to gesture mode and shows the corresponding gesture on the display. If no valid gestures are detected for a certain period (5 seconds), the system automatically reverts back to proximity mode. To avoid false gesture triggers after switching modes, I’ve added a temporary 2-second delay where gesture detection is disabled. This ensures the system works smoothly, with the OLED providing real-time feedback for both proximity readings and gestures.
 
 ```cpp
 #include <Adafruit_APDS9960_Particle.h>

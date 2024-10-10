@@ -178,5 +178,12 @@ void loop() {
     delay(100);  // Short delay for smooth updates
 } 
 ```
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/485107a4-063a-4364-8240-c5a4d95661d5" width="30%" />
+  <img src="https://github.com/user-attachments/assets/bf3fa911-ed13-4a23-a712-a1ea16f5479f" width="30%" />
+  <img src="https://github.com/user-attachments/assets/3ae8e903-2c1b-4d7f-a3b2-525c8d3587a9" width="30%" />
+</p>
+
+
 The APDS9960 is not the most accurate proximity sensor in the world, but for the most part, it gets the job done. For future improvements, I’m considering writing a calibration code to convert the raw proximity values (which range from 0 to 255) into actual distance measurements. This would make the data more meaningful and easier to interpret. I’m also thinking about adjusting the polling rate to make the sensor more responsive and improve the sensitivity of movement detection. However, the polling rate also impacts the system’s scheduling, and since the power on the Photon 2 is quite limited, I’ll need to balance responsiveness with resource consumption. Overall, this experiment was really fun! 
 

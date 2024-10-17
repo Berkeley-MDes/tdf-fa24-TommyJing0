@@ -120,4 +120,87 @@ If everything is set up correctly, you can run this test code in the **Triggerin
 
 If you see the green letters saying **"Function is ready to test"**, that means only one thing: **you are a genius**! Give yourself a pat on the back and click **Run Test**.
 <img width="1512" alt="Screenshot 2024-10-16 at 9 21 46 PM" src="https://github.com/user-attachments/assets/1a8c35d4-28f9-4dc5-b55b-e58770c302c8">
-Now you are talking to ChatGPT! 🎉
+Now you are talking to ChatGPT! 🎉 Remember to hit Deploy Code once everything is set up, and you’re ready to move on to the next step.
+
+### Receiving Responses in Particle Photon
+
+```cpp
+#include <ArduinoJson.h>
+#include "Particle.h"
+#include <Adafruit_SSD1306_RK.h>  // Include Adafruit SSD1306 library
+#include <ArduinoJson.h>           // Include Arduino JSON library for parsing
+
+// OLED setup
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define SCREEN_ADDRESS 0x3D  // I2C address of the OLED
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+// Define event name
+const char* EVENT_NAME = "assistant_request";
+bool requestSent = false;  // Ensure the request is sent only once
+
+void setup() {
+    // Initialize OLED
+    if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+        while (1);  // Halt if OLED initialization fails
+    }
+
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(WHITE);
+    display.setCursor(0, 0);
+    display.println("Sending Request...");
+    display.display();
+
+    // Subscribe to the webhook response
+    Particle.subscribe("hook-response/assistant_request", webhookResponseHandler, MY_DEVICES);
+
+    // Send the request once at startup
+    sendRequest();
+}
+
+void loop() {
+    // No repeated logic needed in loop
+}
+
+// Function to send the event to Particle Cloud
+void sendRequest() {
+    if (!requestSent) {
+        String data = "Hello, how are you?";
+        bool success = Particle.publish(EVENT_NAME, data, PRIVATE);
+        
+        display.clearDisplay();
+        display.setCursor(0, 0);
+
+        if (success) {
+            display.println("Request Sent");
+        } else {
+            display.println("Failed to Send");
+        }
+        display.display();
+
+        requestSent = true;  // Ensure request is only sent once
+    }
+}
+
+// Webhook response handler to display response content on OLED
+void webhookResponseHandler(const char* event, const char* data) {
+    display.clearDisplay();
+    display.setCursor(0, 0);
+    display.setTextSize(1);
+    display.setTextColor(WHITE);
+
+    // Parse the JSON response to extract the "message" field
+    StaticJsonDocument<256> doc;
+    DeserializationError error = deserializeJson(doc, data);
+
+    if (error) {
+        display.println("Parsing failed!");
+    } else {
+        const char* message = doc["message"];
+        display.println(message);  // Display only the message content
+    }
+
+    display.display();
+}

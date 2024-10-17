@@ -123,6 +123,9 @@ If you see the green letters saying **"Function is ready to test"**, that means 
 Now you are talking to ChatGPT! 🎉 Remember to hit Deploy Code once everything is set up, and you’re ready to move on to the next step.
 
 ### Receiving Responses in Particle Photon
+Now that the Cloud Run function is set up, you need to navigate back to the Particle Console integration section. Scroll all the way down to the Custom Webhook Services and click on Start Now to begin setting up the webhook integration.
+<img width="1512" alt="Screenshot 2024-10-16 at 9 40 38 PM" src="https://github.com/user-attachments/assets/468b22cd-06e9-4c99-a83a-0a8409fc88d5">
+The page should look like this ↑
 
 ```cpp
 #include <ArduinoJson.h>

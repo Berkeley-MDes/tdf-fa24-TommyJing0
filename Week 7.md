@@ -90,3 +90,20 @@ functions.http('particleWebhookHandler', async (req, res) => {
 });
 ```
 This code is a Google Cloud Function designed to receive data from a Particle device, send it to the ChatGPT API (using the GPT-4 model), and return a response back to the Particle Cloud. It begins by defining an HTTP endpoint (particleWebhookHandler), which processes incoming requests. The function extracts the message (event data) from the request and sends it to the ChatGPT API using axios. Once the response from ChatGPT is received, the function extracts the message content and sends it back to the Particle Cloud as a response. If there’s an error during the API call, the function logs it and returns a 500 error code. 
+
+### Particle Webhook Handler with ChatGPT Integration (package.json)
+```json
+{
+  "name": "particle-cloud-function",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "@google-cloud/functions-framework": "^3.0.0"
+  }
+}
+```
+This is the package.json file. It is needed because it defines the dependencies and scripts for your Node.js project. It ensures that all necessary packages, such as axios and @google-cloud/functions-framework, are installed and your cloud function runs properly.

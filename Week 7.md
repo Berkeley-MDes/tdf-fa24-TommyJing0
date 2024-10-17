@@ -37,6 +37,56 @@ The key component here is **Pub/Sub**. Pub/Sub (Publish/Subscribe) is a messagin
 
 <img width="1512" alt="Screenshot 2024-10-16 at 8 30 00 PM" src="https://github.com/user-attachments/assets/ad973c4f-4771-42ec-b63a-8d2872c32560">
 
+After you finish setting up the integration, you'll now be able to select the **third option** shown in the image above when creating Cloud Run functions. This is the service account linked to Particle, which you want to choose for proper communication between Google Cloud and your Particle device.
 
+Once you’ve selected this, you’re all set to proceed to the next step—the code! Yeah! 🎉 (Don’t worry, I got you!)
 
+<img width="1512" alt="Screenshot 2024-10-16 at 8 48 28 PM" src="https://github.com/user-attachments/assets/db6c4cfb-0f6b-40b4-8cc2-cff80ccb66a0">
 
+>**Important:** Remember to set up your Entry Point correctly. In my case, I named it `particleWebhookHandler`, so make sure that matches what you have in your code. The Entry Point defines the function that will handle incoming requests.
+
+### Particle Webhook Handler with ChatGPT Integration (index.js)
+```javascript
+const functions = require('@google-cloud/functions-framework');
+const axios = require('axios');
+
+// Define your OpenAI API key
+const OPENAI_API_KEY = 'your-openai-api-key-here'; // Insert your API key here
+
+// Cloud Function Entry Point
+functions.http('particleWebhookHandler', async (req, res) => {
+    console.log('Received request:', req.body);
+
+    // Check if data exists
+    const eventData = req.body.data || 'Hello, how can I help you today?';
+    console.log(`Processing event data: ${eventData}`);
+
+    try {
+        // Call the OpenAI API
+        const openAiResponse = await axios.post(
+            'https://api.openai.com/v1/chat/completions',
+            {
+                model: 'gpt-4',
+                messages: [{ role: 'user', content: eventData }],
+            },
+            {
+                headers: {
+                    'Authorization': `Bearer ${OPENAI_API_KEY}`,
+                    'Content-Type': 'application/json',
+                },
+            }
+        );
+
+        // Extract the response from OpenAI
+        const assistantResponse = openAiResponse.data.choices[0].message.content;
+        console.log(`Response from ChatGPT: ${assistantResponse}`);
+
+        // Send the response back to Particle Cloud
+        res.status(200).send({ message: assistantResponse });
+    } catch (error) {
+        console.error('Error calling ChatGPT:', error.response ? error.response.data : error.message);
+        res.status(500).send({ error: 'Failed to call GPT API' });
+    }
+});
+```
+This code is a Google Cloud Function designed to receive data from a Particle device, send it to the ChatGPT API (using the GPT-4 model), and return a response back to the Particle Cloud. It begins by defining an HTTP endpoint (particleWebhookHandler), which processes incoming requests. The function extracts the message (event data) from the request and sends it to the ChatGPT API using axios. Once the response from ChatGPT is received, the function extracts the message content and sends it back to the Particle Cloud as a response. If there’s an error during the API call, the function logs it and returns a 500 error code. 

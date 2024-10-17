@@ -107,3 +107,16 @@ This code is a Google Cloud Function designed to receive data from a Particle de
 }
 ```
 This is the package.json file. It is needed because it defines the dependencies and scripts for your Node.js project. It ensures that all necessary packages, such as axios and @google-cloud/functions-framework, are installed and your cloud function runs properly.
+
+### Test Code
+If everything is set up correctly, you can run this test code in the **Triggering Event** section to send a message to ChatGPT. You can change `"Hello"` to anything you want ChatGPT to respond to.
+
+```
+{
+  "data": "Hello"
+}
+```
+<img width="1512" alt="Screenshot 2024-10-16 at 9 09 57 PM" src="https://github.com/user-attachments/assets/d7e9602b-611a-4833-a4ca-3476d65c1be4">
+
+If you see the green letters saying **"Function is ready to test"**, that means only one thing: **you are a genius**! Give yourself a pat on the back and click **Run Test**.
+

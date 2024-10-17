@@ -154,6 +154,8 @@ This piece of code ensures that the Particle Event Value (which is the data sent
 
 ### Particle Photon Code for ChatGPT Integration with Webhook Response
 
+Hey, don’t give up! 💪 I know you’re tired, but you’re almost there—this is the last step! 🎉
+
 ```cpp
 #include <ArduinoJson.h>
 #include "Particle.h"
@@ -234,3 +236,11 @@ void webhookResponseHandler(const char* event, const char* data) {
 
     display.display();
 }
+```
+This section completes the process by setting up the Particle Photon code that will handle communication with the webhook from Google Cloud Functions. Here’s a quick breakdown of the code:
+
+	•	OLED Initialization: The code initializes a small OLED screen to display messages. This is used to show feedback directly on the device, like whether a request was sent or if an error occurred.
+	•	Event Publishing: The Photon sends a message (in this case, “Hello, how are you?”) to the Particle Cloud using Particle.publish(). This triggers the Google Cloud Function that was set up.
+	•	Webhook Response Handling: The Photon listens for a response from the webhook, parses the incoming data using ArduinoJson, and displays the relevant information on the OLED screen.
+
+This code allows the Photon to send a request to ChatGPT, receive the response, and display it on the OLED screen. You’ve now integrated Particle with Google Cloud and ChatGPT! 

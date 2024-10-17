@@ -22,6 +22,14 @@ To create a new function, click on the **CREATE FUNCTION** button. This will tak
 Since I am using **ChatGPT** and **Speech to Text**, the trigger type will be **HTTPS**. For testing purposes only, I chose to allow **unauthenticated invocations**. 
 > **Note**: Allowing unauthenticated invocations is highly insecure and should not be used in production environments. Always secure your endpoints in live applications to protect against unauthorized access.
 
+If you scroll down, you will see the **Runtime service account** selection box. You do not want to select the first two options, as shown in the picture below. Instead, navigate to the **Particle Console** to set up the connection. This will allow your Particle device to communicate with your Google Cloud function. In my case, I chose the third option named **Particle**, which is the service account I set up for this purpose.
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/fe0b7a97-5656-41ca-b66c-099700cd8ad5" width="49%" />
+  <img src="https://github.com/user-attachments/assets/a5bcbdc1-6a77-4aed-9bb8-b9c0afdb1fb5" width="49%" />
+</p>
+
+
 
 
 

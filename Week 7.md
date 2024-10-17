@@ -137,6 +137,9 @@ The page should look like this ↑
 During the setup, you can assign any name to your integration; however, pay close attention to the **Event Name**, as this will be the trigger for your function call in the code. 
 Ensure that the **URL** matches the one provided in your Cloud Run Function configuration. See picture below ↓
 
+<img width="1512" alt="Screenshot 2024-10-16 at 9 54 08 PM" src="https://github.com/user-attachments/assets/7d1192eb-5f7d-4b7e-a332-08c913216249">
+
+
 ```cpp
 #include <ArduinoJson.h>
 #include "Particle.h"

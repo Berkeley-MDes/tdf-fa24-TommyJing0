@@ -12,6 +12,16 @@ It's important to note that **Google Cloud Functions** and **Cloud Run** serve s
 
 <img width="1504" alt="Screenshot 2024-10-16 at 7 46 55 PM" src="https://github.com/user-attachments/assets/a07b820f-02d7-4a80-8dd8-23d9cae7e030">
 
+I chose **Cloud Run Functions** because it suited my needs for handling event-driven tasks without the overhead of managing infrastructure.
+
+### Creating the Function
+To create a new function, click on the **CREATE FUNCTION** button. This will take you to the function creation page, where you'll be prompted to fill out some key details like the **Function Name**, **Region**, and **Trigger**. You can specify the event type that will trigger your function, such as an HTTP request or a cloud event. 
+
+<img width="1504" alt="Screenshot 2024-10-16 at 8 01 29 PM" src="https://github.com/user-attachments/assets/9f9c69d2-7a82-4197-a276-dfeac6f6fb2b">
+
+Since I am using **ChatGPT** and **Speech to Text**, the trigger type will be **HTTPS**. For testing purposes only, I chose to allow **unauthenticated invocations**. 
+> **Note**: Allowing unauthenticated invocations is highly insecure and should not be used in production environments. Always secure your endpoints in live applications to protect against unauthorized access.
+
 
 
 

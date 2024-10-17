@@ -139,6 +139,18 @@ Ensure that the **URL** matches the one provided in your Cloud Run Function conf
 
 <img width="1512" alt="Screenshot 2024-10-16 at 9 54 08 PM" src="https://github.com/user-attachments/assets/7d1192eb-5f7d-4b7e-a332-08c913216249">
 
+<img width="1512" alt="Screenshot 2024-10-16 at 9 58 14 PM" src="https://github.com/user-attachments/assets/b37b50c5-d132-4910-8d35-324cea10db92">
+
+Now you want to hit the **Extra Settings** button, and under the drop-down menu, select **Custom**. This will allow you to customize the data being sent in your webhook request.
+
+Next, paste the following code into the **Custom** field:
+
+```json
+{
+  "data": "{{PARTICLE_EVENT_VALUE}}"
+}
+```
+This piece of code ensures that the Particle Event Value (which is the data sent from your Particle device) is properly transmitted in the body of the webhook request. Essentially, the data that you publish with your Particle event is included in the request sent to the Google Cloud Run Function, so it can process the data and provide a response.
 
 ```cpp
 #include <ArduinoJson.h>

@@ -285,3 +285,9 @@ void webhookResponseHandler(const char* event, const char* data) {
 
 #### 5. Error Handling:
 - If any errors occur during the parsing of the response (e.g., if the JSON response is malformed), the OLED will display “Parsing failed!”.
+
+***
+
+### Demo Video
+
+![30_1729196469VideoinOriginalQuality1-ezgif com-rotate](https://github.com/user-attachments/assets/61b1d92c-428d-48ec-9d7c-c292c7c2508e)

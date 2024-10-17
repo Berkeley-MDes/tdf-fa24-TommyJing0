@@ -29,6 +29,13 @@ If you scroll down, you will see the **Runtime service account** selection box. 
   <img src="https://github.com/user-attachments/assets/a5bcbdc1-6a77-4aed-9bb8-b9c0afdb1fb5" width="49%" />
 </p>
 
+Alright, so now you're in the **Particle Console**. Here's the link to get there: [Particle Console Integrations](https://console.particle.io/integrations/gallery).
+
+Once you're on this page, search for **Google Cloud Platform** in the integrations gallery. After you click **Start**, follow the instructions provided—it will guide you through the integration process. Since you already have your Google Cloud set up, you might be able to skip a few steps.
+
+The key component here is **Pub/Sub**. Pub/Sub (Publish/Subscribe) is a messaging service that allows your Particle device to send and receive messages with your Google Cloud function. This communication is essential for passing data between Particle and Google Cloud. Once Pub/Sub is configured, your device can trigger your Google Cloud function using published events, ensuring seamless interaction between the platforms.
+
+<img width="1512" alt="Screenshot 2024-10-16 at 8 30 00 PM" src="https://github.com/user-attachments/assets/ad973c4f-4771-42ec-b63a-8d2872c32560">
 
 
 

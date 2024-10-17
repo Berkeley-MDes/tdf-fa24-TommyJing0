@@ -1,18 +1,22 @@
 ## Week 7
 ## Week of 10/14/2024
-## Custom Webhook, Google Cloud Functions, and API Calls
+## Custom Webhook, Google Cloud Run Functions, and API Calls
 This week, I made great strides on the project by integrating ChatGPT and speech-to-text functionality into the Particle Photon. I used custom webhook functions in the Particle console, and hosted the code through Google Cloud Run Functions. This setup allows Google Cloud Run Functions to make different API calls, communicate back to the Particle Cloud, and eventually connect to the Photon.
 Figuring this out took some time, but I’m excited about how it came together. I’m happy to share my process and hope it can help others working on similar projects.
 
+***
+
 ### Setting Up the Project
-First and foremost, I registered a Google Cloud account and created a project called **Project 1**. After that, I navigated to the Google Cloud dashboard and used the search bar to find **Google Cloud Functions** to begin setting up my webhook.
-It's important to note that **Google Cloud Functions** and **Cloud Run** serve similar purposes in terms of running code in the cloud, but there are key differences:
-- **Google Cloud Functions** is a fully managed serverless platform where you can run functions in response to events without managing the infrastructure. It is ideal for lightweight and event-driven use cases.
+First and foremost, I registered a Google Cloud account and created a project called **Project 1**. After that, I navigated to the Google Cloud dashboard and used the search bar to find **Google Cloud Run Functions** to begin setting up my webhook.
+It's important to note that **Google Cloud Run Functions** and **Cloud Run** serve similar purposes in terms of running code in the cloud, but there are key differences:
+- **Google Cloud Run Functions** is a fully managed serverless platform where you can run functions in response to events without managing the infrastructure. It is ideal for lightweight and event-driven use cases.
 - **Cloud Run**, on the other hand, allows you to run containerized applications in a serverless environment. This makes it better suited for more complex or persistent applications, as you can deploy any containerized code.
 
 <img width="1504" alt="Screenshot 2024-10-16 at 7 46 55 PM" src="https://github.com/user-attachments/assets/a07b820f-02d7-4a80-8dd8-23d9cae7e030">
 
 I chose **Cloud Run Functions** because it suited my needs for handling event-driven tasks without the overhead of managing infrastructure.
+
+***
 
 ### Creating the Function
 To create a new function, click on the **CREATE FUNCTION** button. This will take you to the function creation page, where you'll be prompted to fill out some key details like the **Function Name**, **Region**, and **Trigger**. You can specify the event type that will trigger your function, such as an HTTP request or a cloud event. 
@@ -44,6 +48,8 @@ Once you’ve selected this, you’re all set to proceed to the next step—the 
 <img width="1512" alt="Screenshot 2024-10-16 at 8 48 28 PM" src="https://github.com/user-attachments/assets/db6c4cfb-0f6b-40b4-8cc2-cff80ccb66a0">
 
 >**Important:** Remember to set up your Entry Point correctly. In my case, I named it `particleWebhookHandler`, so make sure that matches what you have in your code. The Entry Point defines the function that will handle incoming requests.
+
+***
 
 ### Particle Webhook Handler with ChatGPT Integration (index.js)
 ```javascript
@@ -91,6 +97,8 @@ functions.http('particleWebhookHandler', async (req, res) => {
 ```
 This code is a Google Cloud Function designed to receive data from a Particle device, send it to the ChatGPT API (using the GPT-4 model), and return a response back to the Particle Cloud. It begins by defining an HTTP endpoint (particleWebhookHandler), which processes incoming requests. The function extracts the message (event data) from the request and sends it to the ChatGPT API using axios. Once the response from ChatGPT is received, the function extracts the message content and sends it back to the Particle Cloud as a response. If there’s an error during the API call, the function logs it and returns a 500 error code. 
 
+***
+
 ### Particle Webhook Handler with ChatGPT Integration (package.json)
 ```json
 {
@@ -108,6 +116,8 @@ This code is a Google Cloud Function designed to receive data from a Particle de
 ```
 This is the package.json file. It is needed because it defines the dependencies and scripts for your Node.js project. It ensures that all necessary packages, such as axios and @google-cloud/functions-framework, are installed and your cloud function runs properly.
 
+***
+
 ### Test Code
 If everything is set up correctly, you can run this test code in the **Triggering Event** section to send a message to ChatGPT. You can change `"Hello"` to anything you want ChatGPT to respond to.
 
@@ -124,6 +134,8 @@ If you see the green letters saying **"Function is ready to test"**, that means 
 <img width="1512" alt="Screenshot 2024-10-16 at 9 21 46 PM" src="https://github.com/user-attachments/assets/1a8c35d4-28f9-4dc5-b55b-e58770c302c8">
 
 Now you are talking to ChatGPT! 🎉 Remember to hit Deploy Code once everything is set up, and you’re ready to move on to the next step.
+
+***
 
 ### Receiving Responses in Particle Photon
 Now that the Cloud Run function is set up, you need to navigate back to the Particle Console integration section. Scroll all the way down to the Custom Webhook Services and click on Start Now to begin setting up the webhook integration.
@@ -151,6 +163,19 @@ Next, paste the following code into the **Custom** field:
 }
 ```
 This piece of code ensures that the Particle Event Value (which is the data sent from your Particle device) is properly transmitted in the body of the webhook request. Essentially, the data that you publish with your Particle event is included in the request sent to the Google Cloud Run Function, so it can process the data and provide a response.
+
+Now, if you click on your **Integrations**, it will take you to a detailed page. On this page, you can click the **Test** button on the right side to verify if the connection to Google Cloud Run Functions is successful.
+
+<img width="1512" alt="Screenshot 2024-10-16 at 10 29 22 PM" src="https://github.com/user-attachments/assets/5e6d1beb-4b8e-4adb-bf23-21f6a87bb570">
+
+If everything is set up correctly, you should see a message on the bottom left corner that says:
+
+**Success! Your integration is behaving as expected.**
+
+<img width="1512" alt="Screenshot 2024-10-16 at 10 37 59 PM" src="https://github.com/user-attachments/assets/684e16cb-d221-4cd6-81b9-a38b4e636f52">
+
+
+***
 
 ### Particle Photon Code for ChatGPT Integration with Webhook Response
 
@@ -237,6 +262,9 @@ void webhookResponseHandler(const char* event, const char* data) {
     display.display();
 }
 ```
+
+***
+
 ### Code Breakdown
 
 #### 1. OLED Display Setup:
@@ -244,15 +272,15 @@ void webhookResponseHandler(const char* event, const char* data) {
 - `display.begin()` initializes the screen, and if the OLED fails to initialize, the system halts.
 
 #### 2. Event Name and Subscription:
-- The event name `"assistant_request"` is defined, and this is the key part that links your Photon with the webhook from Google Cloud. This event will be triggered when data is published to the Particle Cloud, which in turn calls the Google Cloud Function.
+- The event name `"assistant_request"` is defined, and this is the key part that links your Photon with the webhook from Google Cloud. This event will be triggered when data is published to the Particle Cloud, which in turn calls the Google Cloud Run Function.
 - The code subscribes to responses coming from the webhook with `Particle.subscribe("hook-response/assistant_request", webhookResponseHandler, MY_DEVICES);`. This ensures that when the webhook sends back data (from ChatGPT), the Photon can receive and handle it.
 
 #### 3. Sending a Request:
-- The function `sendRequest()` publishes a message (in this example: “Hello, how are you?”) to the Particle Cloud, using `Particle.publish()`. This action triggers the webhook, which connects to the Google Cloud Function.
+- The function `sendRequest()` publishes a message (in this example: “Hello, how are you?”) to the Particle Cloud, using `Particle.publish()`. This action triggers the webhook, which connects to the Google Cloud Run Function.
 - To ensure the request is sent only once, a flag `requestSent` is set to `true` after the request is published.
 
 #### 4. Webhook Response Handling:
-- The `webhookResponseHandler()` function listens for a response from the webhook. Once the Google Cloud Function returns a response (i.e., the ChatGPT-generated message), it parses the response using `ArduinoJson` to extract the message.
+- The `webhookResponseHandler()` function listens for a response from the webhook. Once the Google Cloud Run Function returns a response (i.e., the ChatGPT-generated message), it parses the response using `ArduinoJson` to extract the message.
 - The extracted message is then displayed on the OLED screen.
 
 #### 5. Error Handling:

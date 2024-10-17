@@ -292,4 +292,9 @@ void webhookResponseHandler(const char* event, const char* data) {
 
 This is the demo video where I sent the message **"Hello, how are you?"** to ChatGPT. Of course, the response was as exciting as a weather report, but hey, it works!
 
-![30_1729196469VideoinOriginalQuality1-ezgif com-rotate](https://github.com/user-attachments/assets/61b1d92c-428d-48ec-9d7c-c292c7c2508e)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/61b1d92c-428d-48ec-9d7c-c292c7c2508e" width="49%" alt="Demo Video GIF">
+  <img src="https://github.com/user-attachments/assets/9bf9bafc-16c3-4541-9af3-c1632b026777" width="49%" alt="Additional Screenshot">
+</div>
+
+The image on the right shows the response when I asked **"Tell me a joke"**. And of course, the joke ChatGPT came up with is *very* funny! 

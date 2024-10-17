@@ -119,4 +119,5 @@ If everything is set up correctly, you can run this test code in the **Triggerin
 <img width="1512" alt="Screenshot 2024-10-16 at 9 09 57 PM" src="https://github.com/user-attachments/assets/d7e9602b-611a-4833-a4ca-3476d65c1be4">
 
 If you see the green letters saying **"Function is ready to test"**, that means only one thing: **you are a genius**! Give yourself a pat on the back and click **Run Test**.
-
+<img width="1512" alt="Screenshot 2024-10-16 at 9 21 46 PM" src="https://github.com/user-attachments/assets/1a8c35d4-28f9-4dc5-b55b-e58770c302c8">
+Now you are talking to ChatGPT! 🎉

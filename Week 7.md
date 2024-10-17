@@ -237,10 +237,23 @@ void webhookResponseHandler(const char* event, const char* data) {
     display.display();
 }
 ```
-This section completes the process by setting up the Particle Photon code that will handle communication with the webhook from Google Cloud Functions. Here’s a quick breakdown of the code:
+### Code Breakdown
 
-	•	OLED Initialization: The code initializes a small OLED screen to display messages. This is used to show feedback directly on the device, like whether a request was sent or if an error occurred.
-	•	Event Publishing: The Photon sends a message (in this case, “Hello, how are you?”) to the Particle Cloud using Particle.publish(). This triggers the Google Cloud Function that was set up.
-	•	Webhook Response Handling: The Photon listens for a response from the webhook, parses the incoming data using ArduinoJson, and displays the relevant information on the OLED screen.
+#### 1. OLED Display Setup:
+- The first part of the code sets up an OLED screen using the Adafruit library. It’s initialized to show information such as whether the request has been sent successfully or if any errors occur.
+- `display.begin()` initializes the screen, and if the OLED fails to initialize, the system halts.
 
-This code allows the Photon to send a request to ChatGPT, receive the response, and display it on the OLED screen. You’ve now integrated Particle with Google Cloud and ChatGPT! 
+#### 2. Event Name and Subscription:
+- The event name `"assistant_request"` is defined, and this is the key part that links your Photon with the webhook from Google Cloud. This event will be triggered when data is published to the Particle Cloud, which in turn calls the Google Cloud Function.
+- The code subscribes to responses coming from the webhook with `Particle.subscribe("hook-response/assistant_request", webhookResponseHandler, MY_DEVICES);`. This ensures that when the webhook sends back data (from ChatGPT), the Photon can receive and handle it.
+
+#### 3. Sending a Request:
+- The function `sendRequest()` publishes a message (in this example: “Hello, how are you?”) to the Particle Cloud, using `Particle.publish()`. This action triggers the webhook, which connects to the Google Cloud Function.
+- To ensure the request is sent only once, a flag `requestSent` is set to `true` after the request is published.
+
+#### 4. Webhook Response Handling:
+- The `webhookResponseHandler()` function listens for a response from the webhook. Once the Google Cloud Function returns a response (i.e., the ChatGPT-generated message), it parses the response using `ArduinoJson` to extract the message.
+- The extracted message is then displayed on the OLED screen.
+
+#### 5. Error Handling:
+- If any errors occur during the parsing of the response (e.g., if the JSON response is malformed), the OLED will display “Parsing failed!”.

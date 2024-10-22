@@ -260,11 +260,12 @@ void displayGPTResponse() {
 
 void processGPTResponse() {
     String lowerResponse = gptResponse.toLowerCase();
-    if (lowerResponse.indexOf("east") != -1 || lowerResponse.indexOf("right") != -1 || lowerResponse.indexOf("straight") != -1) {
+    
+    if (lowerResponse.indexOf("east") != -1 || lowerResponse.indexOf("right") != -1) {
         triggerDirectionalVibration(1);
     } else if (lowerResponse.indexOf("west") != -1 || lowerResponse.indexOf("left") != -1) {
         triggerDirectionalVibration(2);
-    } else if (lowerResponse.indexOf("north") != -1 || lowerResponse.indexOf("forward") != -1) {
+    } else if (lowerResponse.indexOf("north") != -1 || lowerResponse.indexOf("forward") != -1 || lowerResponse.indexOf("straight") != -1) {
         triggerDirectionalVibration(3);
     } else if (lowerResponse.indexOf("south") != -1 || lowerResponse.indexOf("back") != -1) {
         triggerDirectionalVibration(4);

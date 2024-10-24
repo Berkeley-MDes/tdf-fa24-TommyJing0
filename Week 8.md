@@ -1,10 +1,10 @@
-## Week 8
-## Week of 10/20/2024
-## Project Update
+# Week 8
+# Week of 10/20/2024
+# Project Update
 
 This week, I continued working on our project and essentially rewrote the entire code to enhance its structure, readability, and efficiency. The primary goal was to make the system more modular and easier to maintain, as well as to ensure that all components are properly initialized before the main operation begins.
 
-## System Initialization and Checks
+# System Initialization and Checks
 
 At the beginning of this new version, the system performs comprehensive checks on all components before proceeding. This includes:
 
@@ -110,7 +110,7 @@ void setup() {
 }
 ```
 
-## Main Loop
+# Main Loop
 
 The next part of the code is the `loop()` function, which serves as the core execution loop of the program. It continuously updates the display and processes location data, as well as handling the interaction with the GPT-based response system.
 
@@ -141,3 +141,50 @@ void loop() {
         motorTriggered = true;
     }
 }
+```
+
+# Hand-Up Motion Detection and Countdown
+
+The next part of the code focuses on detecting the hand-up motion based on accelerometer data and initiating a countdown when the motion is detected.
+
+## Function: `bool isHandUp(float ax, float ay, float az)`
+
+The `isHandUp()` function determines whether the hand is in an "up" position based on the accelerometer readings (`ax`, `ay`, `az`):
+
+- The hand is considered "up" when:
+  - The X-axis acceleration (`ax`) is less than `THRESHOLD_X`.
+  - The absolute value of the Y-axis acceleration (`ay`) is less than `THRESHOLD_Y`.
+  - The Z-axis acceleration (`az`) is greater than `THRESHOLD_Z`.
+
+This check ensures accurate motion detection based on predefined thresholds.
+
+```cpp
+bool isHandUp(float ax, float ay, float az) {
+    return (ax < THRESHOLD_X) && (abs(ay) < THRESHOLD_Y) && (az > THRESHOLD_Z);
+}
+```
+
+## Function: `void displayData()`
+
+The `displayData()` function retrieves the current accelerometer readings from the MPU6050 sensor and processes them to determine if the hand is raised:
+
+- The function converts the raw accelerometer values (`ax`, `ay`, `az`) into floating-point values in terms of g-force.
+- If `isHandUp()` returns `true`, indicating that the hand is raised, the function triggers the `displayUpCountdown()` to initiate a countdown.
+- Otherwise, it calls `displayMainScreen()` to show the accelerometer readings on the display.
+
+```cpp
+void displayData() {
+    int16_t ax, ay, az;
+    mpu.getAcceleration(&ax, &ay, &az);
+
+    float accelX = ax / 16384.0;
+    float accelY = ay / 16384.0;
+    float accelZ = az / 16384.0;
+
+    if (isHandUp(accelX, accelY, accelZ)) {
+        displayUpCountdown();
+    } else {
+        displayMainScreen(accelX, accelY, accelZ);
+    }
+}
+```

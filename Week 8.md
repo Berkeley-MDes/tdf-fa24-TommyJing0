@@ -219,3 +219,44 @@ void displayUpCountdown() {
     }
 }
 ```
+# Home Page
+
+## Function: `void displayMainScreen(float accelX, float accelY, float accelZ)`
+
+The `displayMainScreen()` function updates the OLED display with the current accelerometer readings and location data, if available. It performs the following tasks:
+
+- The display is cleared using `display.clearDisplay()` to ensure that each frame is fresh.
+- The text size and cursor position are set for organized display output.
+- If location data is available (`locationReceived` is `true`), the function displays:
+  - **Latitude**: Displayed with 6 decimal places of precision.
+  - **Longitude**: Displayed with 6 decimal places of precision.
+  - **Accuracy**: Displayed in meters with 2 decimal places.
+- If location data is not available, the `displayAcquiringLocation()` function is called, which provides feedback to the user that the system is still acquiring location information.
+- After the location information (or acquiring message), the function displays the accelerometer readings:
+  - **X, Y, and Z** positions are shown in floating-point format with 1 decimal place.
+- Finally, `display.display()` is called to render all the data on the screen.
+
+This function ensures that both location and position data are displayed dynamically, allowing real-time feedback on the current state of the device.
+
+```cpp
+void displayMainScreen(float accelX, float accelY, float accelZ) {
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setCursor(0, 0);
+
+    if (locationReceived) {
+        display.printf("Location\n");
+        display.printf("Lat: %.6f\n", latitude);
+        display.printf("Lon: %.6f\n", longitude);
+        display.printf("Acc: %.2fm\n", accuracy);
+    } else {
+        displayAcquiringLocation();
+    }
+
+    display.printf("Position\n");
+    display.printf("X %.1f\n", accelX);
+    display.printf("Y %.1f\n", accelY);
+    display.printf("Z %.1f\n", accelZ);
+
+    display.display();
+}

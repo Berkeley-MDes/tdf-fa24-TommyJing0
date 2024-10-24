@@ -1,4 +1,6 @@
-# Project Update
+## Week 8
+## Week of 10/20/2024
+## Project Update
 
 This week, I continued working on our project and essentially rewrote the entire code to enhance its structure, readability, and efficiency. The primary goal was to make the system more modular and easier to maintain, as well as to ensure that all components are properly initialized before the main operation begins.
 
@@ -12,29 +14,11 @@ At the beginning of this new version, the system performs comprehensive checks o
 
 3. **Google Maps API for Location Requests**: The system sends location requests to the Google Maps API using the `GoogleMapsDeviceLocator` library. This allows the device to obtain accurate geographical coordinates, which can be used for location-based features.
 
-By performing these checks upfront, we can ensure that all critical components are operational, thereby reducing runtime errors and improving overall system reliability.
-
 ## Removal of GPT Connection Check
 
-I decided to remove the GPT connection check from the initialization process. This API integration is credit-based and incurs real costs with each request. Since the GPT service is consistently stable and less prone to downtime, it was more economical and practical to eliminate this check. This change reduces unnecessary API calls, saving on costs without compromising functionality.
+I decided to remove the GPT connection check from the initialization process. This API integration is credit-based and incurs real costs with each request. Since the GPT service is consistently stable and less prone to downtime, it was more economical and practical to eliminate this check.
 
-## Code Structure Improvements
-
-- **Modularity**: Functions are now more modular, with clear separation of concerns. Each hardware component's initialization and check are encapsulated in their own blocks.
-
-- **Error Handling**: Improved error handling has been added. If any component fails to initialize, the system provides a descriptive message on the OLED display and halts further execution. This aids in debugging and provides immediate feedback on the system's status.
-
-- **Non-blocking Code**: The use of delays has been minimized where possible to ensure that the system remains responsive. For example, short delays are used after displaying messages to allow the user to read them, but the main loop is designed to be as efficient as possible.
-
-## Additional Features
-
-- **Motor Control**: A motor control mechanism has been implemented using a transistor connected to `motorPin` (A5). The motor is initially set to `HIGH` to ensure it's turned off during initialization.
-
-- **Button Input Handling**: A button connected to `buttonPinNext` (D7) is configured with an internal pull-down resistor. This can be used for user input, such as navigating menus or triggering events.
-
-- **Sensor Thresholds**: Defined constants for thresholds (`THRESHOLD_X`, `THRESHOLD_Y`, `THRESHOLD_Z`) are set for the accelerometer readings. These can be adjusted to fine-tune the sensitivity of motion detection.
-
-## Updated Code Snippet
+## Revised Initialization Sequence
 
 ```cpp
 #include <Wire.h>

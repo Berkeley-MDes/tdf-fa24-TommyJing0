@@ -260,3 +260,44 @@ void displayMainScreen(float accelX, float accelY, float accelZ) {
 
     display.display();
 }
+```
+
+## Function: `void displayAcquiringLocation()`
+
+The `displayAcquiringLocation()` function provides a visual feedback to the user that the system is in the process of acquiring location data. It simulates a loading animation by printing dots that change periodically.
+
+### Key elements of the function:
+
+- **Static Variables**:
+  - `dotCount`: Keeps track of the number of dots to display, simulating a loading effect.
+  - `lastUpdateTime`: Stores the time at which the last update occurred. It is used to determine when the dots should be updated.
+
+- **Flow of the Function**:
+  - The function starts by printing the message **"Acquiring location"** on the display.
+  - It then enters a `for` loop that prints `dotCount` number of dots on the screen, creating a simple animation effect.
+  - After the dots, it adds two empty lines for spacing.
+  
+- **Dot Animation Timing**:
+  - The animation updates every 500 milliseconds. This is controlled by comparing the current time (`currentTime`, obtained using `millis()`) with `lastUpdateTime`. If 500 milliseconds have passed, `dotCount` is incremented and the display is updated.
+  - The number of dots cycles between 0 and 3, which is achieved using the expression `(dotCount + 1) % 4`.
+
+This function keeps the user informed that the system is attempting to acquire location data and adds a dynamic loading effect with dots that appear and disappear in a repeating pattern.
+
+```cpp
+void displayAcquiringLocation() {
+    static int dotCount = 0;
+    static unsigned long lastUpdateTime = 0;
+    unsigned long currentTime = millis();
+
+    display.println("Acquiring location");
+    for (int i = 0; i < dotCount; i++) {
+        display.print(".");
+    }
+    display.println();
+    display.println();
+
+    if (currentTime - lastUpdateTime >= 500) {
+        dotCount = (dotCount + 1) % 4;
+        lastUpdateTime = currentTime;
+    }
+}

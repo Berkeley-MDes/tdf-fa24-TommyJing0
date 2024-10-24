@@ -18,7 +18,7 @@ At the beginning of this new version, the system performs comprehensive checks o
 
 I decided to remove the GPT connection check from the initialization process. This API integration is credit-based and incurs real costs with each request. Since the GPT service is consistently stable and less prone to downtime, it was more economical and practical to eliminate this check.
 
-## Revised Initialization Sequence
+## Initialization Sequence
 
 ```cpp
 #include <Wire.h>
@@ -109,3 +109,35 @@ void setup() {
     delay(1000);
 }
 ```
+
+## Main Loop
+
+The next part of the code is the `loop()` function, which serves as the core execution loop of the program. It continuously updates the display and processes location data, as well as handling the interaction with the GPT-based response system.
+
+## Function: `void loop()`
+
+The `loop()` function performs the following tasks:
+
+1. **Display Data**: 
+   - It calls the `displayData()` function, which retrieves and displays accelerometer data or a countdown if certain conditions are met.
+
+2. **Process Location Updates**: 
+   - The `locator.loop()` function is called, which processes any location data and updates the display if new data is available from the Google Maps Device Locator.
+
+3. **Handle GPT Response**: 
+   - If the system is awaiting a response from GPT (`awaitingResponse` is `true`), and the GPT response has been received (`gptResponseReceived` is `true`), and the motor hasn't been triggered yet (`motorTriggered` is `false`):
+     - It calls `displayGPTResponse()` to show the GPT response on the display.
+     - After the response is displayed, the flags `awaitingResponse`, `gptResponseReceived`, and `motorTriggered` are reset appropriately to ensure the system is ready for the next interaction.
+
+```cpp
+void loop() {
+    displayData();
+    locator.loop();
+
+    if (awaitingResponse && gptResponseReceived && !motorTriggered) {
+        displayGPTResponse();
+        awaitingResponse = false;
+        gptResponseReceived = false;
+        motorTriggered = true;
+    }
+}

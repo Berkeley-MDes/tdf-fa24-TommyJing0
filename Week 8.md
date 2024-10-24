@@ -261,6 +261,34 @@ void displayMainScreen(float accelX, float accelY, float accelZ) {
     display.display();
 }
 ```
+# Locating Position
+
+## Function: `void locationCallback(float lat, float lon, float acc)`
+
+The `locationCallback()` function is responsible for handling location data once it is received.
+
+### Key Parameters:
+- **`lat` (Latitude)**: Represents the latitude of the current location.
+- **`lon` (Longitude)**: Represents the longitude of the current location.
+- **`acc` (Accuracy)**: Indicates the accuracy of the location data in meters.
+
+### What the Function Does:
+- **Updates Global Variables**: 
+  - The values of latitude, longitude, and accuracy passed into the function are assigned to their corresponding global variables (`latitude`, `longitude`, and `accuracy`), making them available throughout the program.
+  
+- **Sets `locationReceived` Flag**: 
+  - The `locationReceived` flag is set to `true`. This flag indicates that the system has successfully received location data and can now proceed with any tasks that depend on having location information.
+  
+This callback function is a critical part of the location handling system, as it ensures that the most recent location data is updated and available for the rest of the program to use.
+
+```cpp
+void locationCallback(float lat, float lon, float acc) {
+    latitude = lat;
+    longitude = lon;
+    accuracy = acc;
+    locationReceived = true;
+}
+```
 
 ## Function: `void displayAcquiringLocation()`
 

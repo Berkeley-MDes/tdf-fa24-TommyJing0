@@ -188,3 +188,34 @@ void displayData() {
     }
 }
 ```
+
+## Function: `void displayUpCountdown()`
+
+When a hand-up motion is detected, the `displayUpCountdown()` function initiates a 5-second countdown on the display:
+
+- The countdown is displayed with the word “UP!” along with the remaining time (from 5 to 0 seconds).
+- During each countdown second, the system checks if a button press is detected (`buttonPinNext`), and if so, it interrupts the countdown and calls `requestDirections()` to initiate the next action.
+- If no button is pressed during the countdown, the display continues updating the countdown every 100 milliseconds.
+
+```cpp
+void displayUpCountdown() {
+    for (int countdown = 5; countdown > 0; countdown--) {
+        display.clearDisplay();
+        display.setTextSize(2);
+        display.setCursor(0, 0);
+        display.println("UP!");
+        display.setTextSize(3);
+        display.setCursor(50, 30);
+        display.println(countdown);
+        display.display();
+
+        for (int i = 0; i < 10; i++) {  
+            if (digitalRead(buttonPinNext) == HIGH) {
+                requestDirections();
+                return;
+            }
+            delay(100);
+        }
+    }
+}
+```

@@ -1,6 +1,6 @@
 # Week 8
 # Week of 10/20/2024
-# Project Update
+# Project Major Software Update
 
 This week, I continued working on our project and essentially rewrote the entire code to enhance its structure, readability, and efficiency. The primary goal was to make the system more modular and easier to maintain, as well as to ensure that all components are properly initialized before the main operation begins.
 
@@ -261,7 +261,7 @@ void displayMainScreen(float accelX, float accelY, float accelZ) {
     display.display();
 }
 ```
-# Locating Position
+# Google Maps Integration
 
 ## Function: `void locationCallback(float lat, float lon, float acc)`
 
@@ -330,3 +330,8 @@ void displayAcquiringLocation() {
     }
 }
 ```
+
+All the content above outlines the updates made this week. The ChatGPT integration remains largely the same, with some minor improvements in how responses are handled for smoother interactions.
+
+# Project Video Finalized
+Jiawen and I spent some time finishing the product demo portion of the video. I also recorded myself explaining the software, system diagram, and other related aspects. She took charge of most of the video editing, while I focused on finalizing the software development. We’re such a great team!

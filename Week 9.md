@@ -12,3 +12,13 @@ I created my first workflow in ZeroWidth using a simple flow to test how the pla
 I tested the workflow with a “hello” message, and it worked perfectly, processing through each node as expected.
 
 <img width="1512" alt="Screenshot 2024-10-31 at 10 23 53 AM" src="https://github.com/user-attachments/assets/1655876b-505d-478c-a0f4-ad666d4bd63d">
+
+I then created and experimented with a knowledge-based search flow. Starting with a Single Prompt Input node to capture user input, I connected it to the Search Knowledge node to retrieve relevant information from a knowledge database. The retrieved chunks were then processed through a Variable Replacer to dynamically adjust terms or variables. This refined input was fed into OpenAI GPT-4o Mini, which generated a response based on the user prompt and relevant knowledge. Finally, the response was displayed in the Output node, completing the flow.
+
+<img width="1512" alt="Screenshot 2024-10-31 at 10 35 27 AM" src="https://github.com/user-attachments/assets/0ae2192a-fca6-4684-8792-cb7a17ee2001">
+
+At this point, I was feeling too lazy to create my own knowledge base, so I borrowed Shryas’s existing knowledge base (hoping he doesn’t mind) and asked GPT who he is.
+
+<img width="1512" alt="Screenshot 2024-10-31 at 10 40 24 AM" src="https://github.com/user-attachments/assets/15cd19e0-f9bd-4db5-a035-9a07551082cd">
+
+As you can see, the information is retrieved from the knowledge base, and here we have it!

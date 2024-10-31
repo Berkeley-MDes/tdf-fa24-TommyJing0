@@ -1,4 +1,4 @@
-# Week 8
+# Week 9
 # Week of 10/20/2024
 # Exploring LLMs on ZeroWidth Plantform 
 This week, we began our third project, which focuses on LLMs and utilizes a platform called ZeroWidth. I successfully logged in using the provided invitation link and created my first project, naming it “Tommy’s Project.”
@@ -22,3 +22,11 @@ At this point, I was feeling too lazy to create my own knowledge base, so I borr
 <img width="1512" alt="Screenshot 2024-10-31 at 10 40 24 AM" src="https://github.com/user-attachments/assets/15cd19e0-f9bd-4db5-a035-9a07551082cd">
 
 As you can see, the information is retrieved from the knowledge base, and here we have it!
+
+<img width="1512" alt="Screenshot 2024-10-31 at 2 57 47 PM" src="https://github.com/user-attachments/assets/bf8691f2-f811-438b-8a1a-57b647c6e4b2">
+
+I then added my GitHub weekly reports from Week 1 to Week 8, along with the README file, to the knowledge base using the single chunk method for efficiency and simplicity. This setup worked smoothly using the same workflow shown above.
+
+<img width="1512" alt="Screenshot 2024-10-31 at 3 01 57 PM" src="https://github.com/user-attachments/assets/8d70a2ec-f6f0-4fe2-a49d-24a698082932">
+
+To test it, I asked, “What did Tommy (me) do in Week 1?” and the answer was spot on!

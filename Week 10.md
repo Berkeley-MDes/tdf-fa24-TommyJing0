@@ -15,3 +15,7 @@ In this experiment, I tackled the issue of generic responses by building a knowl
 
 To fine-tune the system, I implemented sliders to control chunk size and similarity thresholds. Increasing the chunk size allowed the agent to access more detailed information, while adjusting the similarity threshold helped strike a balance between generality and specificity in its responses. This approach significantly improved the agent’s ability to match user queries with relevant information from the knowledge base.
 <img width="1512" alt="Screenshot 2024-11-09 at 8 59 36 AM" src="https://github.com/user-attachments/assets/2beeb5a9-3480-44d6-88ee-a3c5209de988">
+
+## Experiment 4 (Ask a GPT with Instructions, RAG, and variables)
+In this experiment, I incorporated “Location” and “Year” variables to enhance the context specificity of the agent’s responses. Given that I’m based in Berkeley, CA, and primarily working in 2024, the agent was configured to prioritize information relevant to this specific location and time frame. This adjustment ensured that responses were more aligned with my current context, avoiding irrelevant data from other locations or years.
+<img width="1512" alt="Screenshot 2024-11-09 at 9 04 08 AM" src="https://github.com/user-attachments/assets/6b229603-06e4-43e9-a8c9-ac5b578d919c">

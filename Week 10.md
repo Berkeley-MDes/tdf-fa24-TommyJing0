@@ -1,4 +1,4 @@
-# Week 9
+# Week 10
 # Week of 11/09/2024
 # Crafting Custom AI through Experimental Design on Zerowidth
 ## Experiment 1 (Ask a GPT)
@@ -19,3 +19,13 @@ To fine-tune the system, I implemented sliders to control chunk size and similar
 ## Experiment 4 (Ask a GPT with Instructions, RAG, and variables)
 In this experiment, I incorporated “Location” and “Year” variables to enhance the context specificity of the agent’s responses. Given that I’m based in Berkeley, CA, and primarily working in 2024, the agent was configured to prioritize information relevant to this specific location and time frame. This adjustment ensured that responses were more aligned with my current context, avoiding irrelevant data from other locations or years.
 <img width="1512" alt="Screenshot 2024-11-09 at 9 04 08 AM" src="https://github.com/user-attachments/assets/6b229603-06e4-43e9-a8c9-ac5b578d919c">
+
+## Experiment 5 (AI Engine Oil Advisor)
+In this experiment, I built on previous frameworks to develop a specialized tool for car maintenance. Users input their car’s year, make, model, and driving style—whether comfort, sport, or track. Based on these parameters, the AI generates tailored recommendations, including the top three oil and filter options and suggested service intervals. The goal is to help users optimize their vehicle’s performance and longevity by aligning maintenance with their specific driving habits and conditions.
+<img width="1512" alt="Screenshot 2024-11-09 at 9 07 05 AM" src="https://github.com/user-attachments/assets/94127ff1-a5f6-4839-ac84-5909da3df7b0">
+<img width="1512" alt="Screenshot 2024-11-09 at 9 09 25 AM" src="https://github.com/user-attachments/assets/dfff7b60-29bd-4688-892e-e634c9faf539">
+
+To achieve this, I employed multiple prompts to guide the AI on task execution and output formatting. A knowledge base was integrated, containing a comprehensive list of oil brands and product options, along with detailed data sheets for various high-performance oils. This setup enabled the AI to address advanced queries, such as identifying oils with higher ZDDP content, and offer recommendations tailored to individual needs.
+<img width="1512" alt="Screenshot 2024-11-09 at 9 21 53 AM" src="https://github.com/user-attachments/assets/f054dab0-c495-4ca2-b06c-f7312dd609e4">
+
+

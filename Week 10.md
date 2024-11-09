@@ -28,4 +28,7 @@ In this experiment, I built on previous frameworks to develop a specialized tool
 To achieve this, I employed multiple prompts to guide the AI on task execution and output formatting. A knowledge base was integrated, containing a comprehensive list of oil brands and product options, along with detailed data sheets for various high-performance oils. This setup enabled the AI to address advanced queries, such as identifying oils with higher ZDDP content, and offer recommendations tailored to individual needs.
 <img width="1512" alt="Screenshot 2024-11-09 at 9 21 53 AM" src="https://github.com/user-attachments/assets/f054dab0-c495-4ca2-b06c-f7312dd609e4">
 
+I tested the tool by asking the AI different questions. It successfully provided detailed responses, consolidating all engine oil and filter recommendations into a single, structured output tailored to the car’s specifications and driving style. The AI also handled advanced queries, such as identifying high ZDDP oils, with ease. This experiment highlights the effectiveness of a custom AI designed for a specific task, delivering precise and reliable solutions.
+<img width="1512" alt="Screenshot 2024-11-09 at 9 24 11 AM" src="https://github.com/user-attachments/assets/ebeb26f8-e308-40f9-8852-84691ac19c89">
+<img width="1512" alt="Screenshot 2024-11-09 at 9 27 02 AM" src="https://github.com/user-attachments/assets/abb8853e-ca32-4a5e-b254-2a7b9c9a11ae">
 

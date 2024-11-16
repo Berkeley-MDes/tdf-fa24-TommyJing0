@@ -190,7 +190,5 @@ The APDS9960 is not the most accurate proximity sensor in the world, but for the
 ## Project Proposal
 [Tommy_Jing_Jiawen_Chen_Project_2_Proposal.pdf](https://github.com/user-attachments/files/17330774/Tommy_Jing_Jiawen_Chen_Project_2_Proposal.pdf)
 
-
-
-
-
+## Speculations
+Working with the Particle Photon, OLED display, and APDS9960 sensor made me consider how future hardware could simplify prototyping and enhance functionality. Sensors might feature built-in calibration, converting raw data into precise, user-friendly formats like actual distance measurements. Development boards could integrate smarter power management, dynamically adjusting polling rates to balance performance and energy efficiency. Prototyping tools, such as breadboards, might also evolve with error detection capabilities to identify connection issues or signal interference, making the development process more reliable and efficient for complex projects.

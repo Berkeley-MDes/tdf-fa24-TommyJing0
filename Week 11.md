@@ -9,3 +9,6 @@ This week, I completed the project demo video, which includes four experiments a
 The editing process for the video was straightforward, thanks to my experience with DaVinci Resolve. With the AI-generated voice already prepared, assembling the video was smooth and efficient. I inserted the slides and screenshots into their corresponding time slots, ensuring a cohesive flow. The entire process took about 4 hours, and I added background music at the end, which provided a nice finishing touch.
 
 <img width="1512" alt="Screenshot 2024-11-16 at 9 28 57 AM" src="https://github.com/user-attachments/assets/9cd149f6-89d1-4d50-9416-89a237a3abca">
+
+## Speculations
+While working on the LLM and later the video using the AI-generated voice, I began to speculate whether AI could one day create an entire video based solely on a rubric or prompt. Imagine providing a set of instructions, and the AI automatically generates the narration, visuals, transitions, and even background music. This capability could transform how projects are presented, streamlining the process and making it more accessible. 

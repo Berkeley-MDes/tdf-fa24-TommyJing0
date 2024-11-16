@@ -30,3 +30,6 @@ I then added my GitHub weekly reports from Week 1 to Week 8, along with the READ
 <img width="1512" alt="Screenshot 2024-10-31 at 3 01 57 PM" src="https://github.com/user-attachments/assets/8d70a2ec-f6f0-4fe2-a49d-24a698082932">
 
 To test it, I asked, “What did Tommy (me) do in Week 1?” and the answer was spot on!
+
+## Speculations
+The future of LLMs lies in creating highly personalized AI systems that adapt to individual preferences and behaviors. These AI agents could provide tailored recommendations, predict needs, and streamline tasks across domains like health monitoring, home automation, and professional workflows. As LLMs become more advanced and accessible, creating personalized AI could become even easier, allowing users to build systems that offer seamless, intuitive support, enhancing productivity and quality of life.

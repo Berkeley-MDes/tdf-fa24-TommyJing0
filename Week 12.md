@@ -1,6 +1,6 @@
 # Week 12
 # Week of 11/17/2024
-## Open CV Experiment
+## Real-Time Detection Experiment with OpenCV
 
 This week, I experimented with **OpenCV**, **MediaPipe**, and **YOLOv8** to create a real-time object detection and tracking system. The project integrates multiple technologies to perform the following tasks:
 

@@ -12,3 +12,5 @@ This week, I experimented with **OpenCV**, **MediaPipe**, and **YOLOv8** to crea
 
 3. **Face Detection and Emotion Recognition (FER)**:  
    MediaPipe’s face detection was used to locate faces, and FER (Facial Expression Recognition) was employed to analyze emotions in the detected face regions. The emotion and confidence score are displayed in real-time.
+   
+<img width="1512" alt="Screenshot 2024-11-22 at 3 48 56 PM" src="https://github.com/user-attachments/assets/c3596ffe-f64c-483a-86ef-edfa617510d3">

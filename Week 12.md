@@ -14,3 +14,14 @@ This week, I experimented with **OpenCV**, **MediaPipe**, and **YOLOv8** to crea
    MediaPipe’s face detection was used to locate faces, and FER (Facial Expression Recognition) was employed to analyze emotions in the detected face regions. The emotion and confidence score are displayed in real-time.
    
 <img width="1512" alt="Screenshot 2024-11-22 at 3 48 56 PM" src="https://github.com/user-attachments/assets/c3596ffe-f64c-483a-86ef-edfa617510d3">
+
+### My Python Experience
+This screenshot shows one of my first times using Python for programming. While Python is simple and easy to start with, working with libraries like **OpenCV**, **MediaPipe**, and **YOLO** had some challenges. Here’s what I learned:
+
+1. **Setting Up Libraries**: Installing libraries like `mediapipe`, `ultralytics`, and `FER` using `pip` was easy, but figuring out how to use them together took some time.
+
+2. **Real-Time Feedback**: The terminal at the bottom shows live results from the YOLO model, such as detecting "person" and "bottle." This feedback helped me check if my code was working correctly.
+
+3. **Learning Curve**: While Python is beginner-friendly, understanding how these tools work together required some extra effort and practice.
+
+This experiment helped me learn how powerful Python is for combining different tools into one system, and I look forward to improving as I practice more.

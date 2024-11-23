@@ -25,3 +25,5 @@ This screenshot shows one of my first times using Python for programming. While 
 3. **Learning Curve**: While Python is beginner-friendly, understanding how these tools work together required some extra effort and practice.
 
 This experiment helped me learn how powerful Python is for combining different tools into one system, and I look forward to improving as I practice more.
+
+<img width="1512" alt="Screenshot 2024-11-22 at 3 55 45 PM" src="https://github.com/user-attachments/assets/fa860313-a093-4b88-8091-ed038bee5675">

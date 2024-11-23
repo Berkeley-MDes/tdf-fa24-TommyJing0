@@ -31,5 +31,5 @@ This experiment helped me learn how powerful Python is for combining different t
 ### Experiment Result
 In this experiment, the system quickly detected me as a person, my cell phone, hand landmarks, and my emotion (“neutral” with 57% confidence) in real time. It performed efficiently, accurately recognizing objects and tracking my hand, though emotion detection could improve with better conditions.
 
-### Speculations
+## Speculations
 I was wondering if all this processing—real-time object detection, hand tracking, and emotion recognition—could be handled efficiently by a small device like the Raspberry Pi 5. While the Raspberry Pi 5 is significantly more powerful than its predecessors, running multiple tasks like YOLOv8 for object detection, MediaPipe for hand tracking, and FER for emotion analysis in real time might require optimization or the use of lightweight models. I plan to test this setup on the Raspberry Pi 5 to explore its performance and see if it can manage these computationally heavy workloads without external hardware acceleration.

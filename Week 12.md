@@ -26,4 +26,5 @@ This screenshot shows one of my first times using Python for programming. While 
 
 This experiment helped me learn how powerful Python is for combining different tools into one system, and I look forward to improving as I practice more.
 
-<img width="1512" alt="Screenshot 2024-11-22 at 3 55 45 PM" src="https://github.com/user-attachments/assets/fa860313-a093-4b88-8091-ed038bee5675">
+<img width="1512" alt="Screenshot 2024-11-22 at 4 07 41 PM" src="https://github.com/user-attachments/assets/f6481e77-5ae7-4d25-b478-57fbab440e74">
+

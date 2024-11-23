@@ -28,3 +28,7 @@ This experiment helped me learn how powerful Python is for combining different t
 
 <img width="1512" alt="Screenshot 2024-11-22 at 4 07 41 PM" src="https://github.com/user-attachments/assets/f6481e77-5ae7-4d25-b478-57fbab440e74">
 
+### Experiment Result
+In this experiment, the system quickly detected me as a person, my cell phone, hand landmarks, and my emotion (“neutral” with 57% confidence) in real time. It performed efficiently, accurately recognizing objects and tracking my hand, though emotion detection could improve with better conditions.
+
+
